@@ -34,6 +34,7 @@
     </script>
     <script>
     var url = 'https://asd6362as.github.io/aaa/car.json';
+    var url1 = 'https://asd6362as.github.io/aaa/car1.json';
     function initMap() {
          var icon = "icon.png";
          var marker;
@@ -43,6 +44,7 @@
             center: latlng 
          });
     callAjax(url);
+    callAjax(url1);
     function callAjax(url) {
       var xhr = new XMLHttpRequest();
          xhr.open('get', url, true);
@@ -54,8 +56,8 @@
       for(i=0;i<carData.length;i++){
          var str ={};
          var place = {};
-         place.lat = parseFloat(carData[i]['GPS緯度']);
-         place.lng = parseFloat(carData[i]['GPS經度']);
+         place.lat = parseFloat(carData[i]['lat']);
+         place.lng = parseFloat(carData[i]['lon']);
          str.map = map;
          str.position = place;
          str.icon = 'https://asd6362as.github.io/aaa/car1.png'  ;
