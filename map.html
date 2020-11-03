@@ -29,73 +29,59 @@
     <div class="body">
         <div id="map"></div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX5leokofv0p2FpjEO8XZeB6N7TxV-pnk&callback=initMap">
     </script>
     <script>
     var url = 'https://asd6362as.github.io/aaa/car.json';
     function initMap() {
-        var icon = "icon.png";
-        var marker=[];
-        var latlng = {lat:24.990229,lng:121.232133};
-        var map = new google.maps.Map(document.getElementById('map'), {
+         var icon = "icon.png";
+         var marker;
+         var latlng = {lat:24.990229,lng:121.232133};
+         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 15,
             center: latlng 
-        });
+         });
     callAjax(url);
     function callAjax(url) {
       var xhr = new XMLHttpRequest();
-        xhr.open('get', url, true);
-        xhr.send(null);
-        xhr.onload = function() {
-        var record = JSON.parse(xhr.responseText);
-        carData = record.result.records;
-        len = carData.length;
+         xhr.open('get', url, true);
+         xhr.send(null);
+         xhr.onload = function() {
+         var record = JSON.parse(xhr.responseText);
+         carData = record.result.records;
+         len = carData.length;
       for(i=0;i<carData.length;i++){
-        var str ={};
-        var place = {};
-        place.lat = parseFloat(carData[i]['GPS緯度']);
-        place.lng = parseFloat(carData[i]['GPS經度']);
-        str.map = map;
-        str.position = place;
-        str.icon = 'https://asd6362as.github.io/aaa/car1.png'  ;
-        str.title= carData[i]['車禍'];
-        console.log(str);
-        var marker1 = new google.maps.Marker(str);
+         var str ={};
+         var place = {};
+         place.lat = parseFloat(carData[i]['GPS緯度']);
+         place.lng = parseFloat(carData[i]['GPS經度']);
+         str.map = map;
+         str.position = place;
+         str.icon = 'https://asd6362as.github.io/aaa/car1.png'  ;
+         str.title= carData[i]['車禍'];
+         console.log(str);
+         var marker1 = new google.maps.Marker(str);
     }
     }
     }; 
-     setInterval(aa, 500);
-     function aa() {
-       if (navigator.geolocation) {
+     setInterval(displayLocation, 500);
+  
+      function displayLocation() {
+         if (navigator.geolocation) {
          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-                };
-                var marker_config = [{
-                  position: {lat: position.coords.latitude, lng: position.coords.longitude},
-                  map: map,
-                  }];
-                  marker_config.forEach(function(e,i){
-                  e.position = pos;
-                  e.icon = 'https://asd6362as.github.io/aaa/me.png';
-                  e.map = map;
-                  markers[i] = new google.maps.Marker(e);
-                  markers[i].setMap(null);
-  });
-            /*marker = new google.maps.Marker({
-                position : pos,
-                icon: 'https://asd6362as.github.io/aaa/me.png',
-                map: map
-                });*/
-                
-                map.setCenter(pos);
+             var position1 = new google.maps.LatLng(position.coords.latitude,  position.coords.longitude);
+             if (marker && marker.setMap) {
+                 marker.setMap(null);
+           }
+             marker = new google.maps.Marker({
+                 position :position1 ,
+                 icon: 'https://asd6362as.github.io/aaa/me.png',
+                 map: map
+                 });   
+                 map.setCenter(position1);
         });  
-    }
-
-    }
-      
+    }}
 }  
 </script>
 </body>
