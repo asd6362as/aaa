@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="document.body.clientWidth, document.body.clientHeight">
+    <style type="text/css" media="screen">
+    html {
+        height: 100%;
+        width: 100%;
+    }
+    #map {
+        position: absolute;
+        left: 0;
+        height: 80%;
+        width: 100vw;
+    }
+    #body {
+        height: 100%;
+        width: 100vw;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <div id="map"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX5leokofv0p2FpjEO8XZeB6N7TxV-pnk&callback=initMap">
+    </script>
+    <script>
+    var url = 'https://asd6362as.github.io/aaa/car.json';
+    function initMap() {
+        var icon = "icon.png";
+        var marker;
+        var latlng = {lat:24.990229,lng:121.232133};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: latlng 
+        });
+    callAjax(url);
+    function callAjax(url) {
+      var xhr = new XMLHttpRequest();
+        xhr.open('get', url, true);
+        xhr.send(null);
+        xhr.onload = function() {
+        var record = JSON.parse(xhr.responseText);
+        carData = record.result.records;
+        len = carData.length;
+      for(i=0;i<carData.length;i++){
+        var str ={};
+        var place = {};
+        place.lat = parseFloat(carData[i]['GPS緯度']);
+        place.lng = parseFloat(carData[i]['GPS經度']);
+        str.map = map;
+        str.position = place;
+        str.icon = 'https://asd6362as.github.io/aaa/car1.png'  ;
+        str.title= carData[i]['車禍'];
+        console.log(str);
+        var marker1 = new google.maps.Marker(str);
+    }
+    }
+    }; 
+    function del() {
+            marker.setMap(null);
+            marker = null;
+    }
+     setInterval(aa, 500);
+     function aa() {
+       if (navigator.geolocation) {
+         navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+                };
+            marker = new google.maps.Marker({
+                position : pos,
+                icon: 'https://asd6362as.github.io/aaa/me.png',
+                map: map
+                });
+                
+                map.setCenter(pos);
+        });  
+    }
+    settimeout(del, 400);
+    }
+      
+}  
+</script>
+</body>
+</html>
+
+
+
+
