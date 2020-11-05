@@ -12,7 +12,7 @@
     #map {
         position: absolute;
         left: 0;
-        height: 80%;
+        height: 95%;
         width: 100vw;
     }
     #body {
@@ -41,7 +41,7 @@
          var latlng = {lat:24.990229,lng:121.232133};
          var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 15,
-            center: latlng 
+            center: latlng
          });
     callAjax(url);
     callAjax(url1);
@@ -66,9 +66,9 @@
          var marker1 = new google.maps.Marker(str);
     }
     }
-    }; 
+    };
      setInterval(displayLocation, 500);
-  
+
       function displayLocation() {
          if (navigator.geolocation) {
          navigator.geolocation.getCurrentPosition(function(position) {
@@ -80,11 +80,11 @@
                  position :position1 ,
                  icon: 'https://asd6362as.github.io/aaa/me.png',
                  map: map
-                 });   
+                 });
                  map.setCenter(position1);
-        });  
+        });
     }}
-}  
+}
 </script>
 </body>
 </html>
