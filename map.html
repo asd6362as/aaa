@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
+<title>MAP</title>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,11 +68,12 @@
     }
     }
     };
-     setInterval(displayLocation, 500);
+     setInterval(displayLocation, 1000);
 
       function displayLocation() {
          if (navigator.geolocation) {
          navigator.geolocation.getCurrentPosition(function(position) {
+             var lat = position.coords.latitude , lng = position.coords.longitude;
              var position1 = new google.maps.LatLng(position.coords.latitude,  position.coords.longitude);
              if (marker && marker.setMap) {
                  marker.setMap(null);
@@ -81,6 +83,7 @@
                  icon: 'https://asd6362as.github.io/aaa/me.png',
                  map: map
                  });
+                 if (lat>position.coords.latitude+0.001 || lat<position.coords.latitude-0.001 || lng>position.coords.longitude+0.001 || lng<position.coords.longitude-0.001)
                  map.setCenter(position1);
         });
     }}
