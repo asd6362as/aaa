@@ -37,13 +37,13 @@
     var url = 'https://asd6362as.github.io/aaa/car.json';
     var url1 = 'https://asd6362as.github.io/aaa/car1.json';
     function initMap() {
-         var icon = "icon.png";
          var marker;
          var latlng = {lat:24.990229,lng:121.232133};
          var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 15,
             center: latlng
          });
+
     callAjax(url);
     callAjax(url1);
     function callAjax(url) {
@@ -83,8 +83,9 @@
                  icon: 'https://asd6362as.github.io/aaa/me.png',
                  map: map
                  });
-                 if (lat>position.coords.latitude+0.001 || lat<position.coords.latitude-0.001 || lng>position.coords.longitude+0.001 || lng<position.coords.longitude-0.001)
+                 if (lat>position.coords.latitude+0.003 || lat<position.coords.latitude-0.003 || lng>position.coords.longitude+0.003 || lng<position.coords.longitude-0.003) {
                  map.setCenter(position1);
+                 }
         });
     }}
 }
