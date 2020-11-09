@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <title>EC</title>
+  <head>
+    <meta charset="utf-8" />
+    <style type="text/css" media="screen">
+      html {
+        height: 100%;
+        width: 100%;
+      }
+      #body {
+        height: 90%;
+        width: 100vw;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+      #text1 {
+        font-size: 40px;
+        top:1%;
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="body">
+    //<div align=center>
+    <label for="name"style=" position: absolute;
+        width: 90%;
+        font-size: 40px;
+        left: 1%;
+        TOP:1%;
+
+      "><b>緊急聯絡人</b></label></div>
+<form name='form' id='form'>
+  <label for="name"style=" position: absolute;
+        width: 20%;
+        font-size: 20px;
+        left: 7%;
+        TOP:10%;
+      ">姓　　名：</label>
+  <input type='text' name='name' id='name' style="
+        position: absolute;
+        width: 70%;
+        font-size: 20px;
+        right: 16%;
+        TOP:10%;
+      "  />
+      <br>
+  <label for="email"style=" position: absolute;
+        width: 20%;
+        font-size: 20px;
+        left: 7%;
+        TOP:15%;
+      ">電子信箱：</label>
+  <input type='email' name='email' id='email' style="
+        position: absolute;
+        width: 70%;
+        font-size: 20px;
+        right: 16%;
+        TOP:15%;
+      "/><br>
+  <label for="phone"style=" position: absolute;
+        width: 20%;
+        font-size: 20px;
+        left: 7%;
+        TOP:20%;
+      ">手機號碼：</label>
+  <input type='text' name='phone' id='phone' style="
+        position: absolute;
+        width: 70%;
+        font-size: 20px;
+        right: 16%;
+        TOP:20%;
+      "/>
+       <input type='reset' name='reset' value='重置' style="
+        position: absolute;
+        width: 70px;
+        height: 40px;
+        font-size: 20px;
+        right: 10%;
+        TOP:40%;
+      " />
+  <input type='button' name='submit' value='送出' style="
+        position: absolute;
+        width: 70px;
+        height: 40px;
+        font-size: 20px;
+        right: 5%;
+        TOP:40%;
+      "  onclick='processFormData() ;'
+       />
+ <script>
+ function processFormData() {
+  const nameElement = document.getElementById("name");
+  const name = nameElement.value;
+  const emailElement = document.getElementById("email");
+  const email = emailElement.value;
+  const phoneElement = document.getElementById("phone");
+  const phone = phoneElement.value;
+  alert("你的姓名是 " + name + "\n電子郵件是 " + email
+   + "\n手機是 " + phone);
+   window.location.href='map.html';
+}
+</script>
+</form>
+    <input
+      id="EC1"
+      type="button"
+      value="返回地圖"
+      style="
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        font-size: 18px;
+        right: 2%;
+        bottom: 3%;
+      "
+      onClick="location.href='map.html'"
+    />
+   </div>
+  </body>
+</html>
