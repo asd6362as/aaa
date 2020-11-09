@@ -40,6 +40,9 @@
     ></script>
 
     <script type="text/javascript">
+    var strUrl = location.search;
+    var getPara, ParaVal;
+    var aryPara = [];
     var marker1;
     var map;
     var markers = [];
@@ -53,7 +56,15 @@
           streetViewControl: false,
           clickableIcons: true,
         });
-
+      if (strUrl.indexOf("?") != -1) {
+        var getSearch = strUrl.split("?");
+        getPara = getSearch[1].split("&");
+        for (i = 0; i < getPara.length; i++) {
+          ParaVal = getPara[i].split("=");
+          aryPara.push(ParaVal[0]);
+          aryPara[ParaVal[0]] = ParaVal[1];
+        }
+      }
         setInterval(displayLocation, 1000);
         function displayLocation() {
           if (navigator.geolocation) {
@@ -120,11 +131,9 @@
         }
       }
       function Dc() {
-        $("button").click(function(){
-         $.get("EC.html",Dc1[0]);
-      });
-alert(Dc1[0])
+alert(getPara);
       }
+
     </script>
 
     <input

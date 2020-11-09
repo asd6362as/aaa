@@ -25,7 +25,7 @@
 
   <body>
     <div class="body">
-    <form name='form' id='form' action="map.html" method="get"></form>
+    <form name='form' id='form' action="map.html" method="get">
     <label for="name"style=" position: absolute;
         width: 30%;
         font-size: 20px;
@@ -84,17 +84,17 @@
         right: 40%;
         TOP:450px;
       " />
-  <input type='button' name='submit' value='送出' style="
+  <input type='submit' name='submit' value='送出' style="
         position: absolute;
         width: 70px;
         height: 40px;
         font-size: 20px;
         right: 5%;
         TOP:450px;
-      "  onclick='processFormData() ;'
+      "
        />
 
- <script>
+ <!-- <script>
  function processFormData() {
   const nameElement = document.getElementById("name");
   const name = nameElement.value;
@@ -104,7 +104,7 @@
   const phone = phoneElement.value;
    window.location.href='map.html';
 }
-</script>
+</script> -->
 </form>
     <input
       id="EC1"
