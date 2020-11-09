@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
-  <title>EC</title>
+  <title>緊急聯絡人</title>
   <head>
     <meta charset="utf-8" />
     <style type="text/css" media="screen">
@@ -33,7 +33,7 @@
         TOP:0%;
 
       "><b>緊急聯絡人</b></label></div>
-<form name='form' id='form'>
+<form name='form' id='form' action="map.html" method="get">
   <label for="name"style=" position: absolute;
         width: 30%;
         font-size: 20px;
@@ -64,7 +64,7 @@
   <label for="phone"style=" position: absolute;
         width: 30%;
         font-size: 20px;
-        left: 1%;
+        left: 1%
         TOP:200px;
       ">手機號碼：</label>
   <input type='text' name='phone' id='phone' style="
@@ -91,6 +91,7 @@
         TOP:250px;
       "  onclick='processFormData() ;'
        />
+
  <script>
  function processFormData() {
   const nameElement = document.getElementById("name");
@@ -99,8 +100,6 @@
   const email = emailElement.value;
   const phoneElement = document.getElementById("phone");
   const phone = phoneElement.value;
-  alert("你的姓名是 " + name + "\n電子郵件是 " + email
-   + "\n手機是 " + phone);
    window.location.href='map.html';
 }
 </script>
