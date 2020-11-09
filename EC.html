@@ -25,16 +25,8 @@
 
   <body>
     <div class="body">
-    <div align=center>
+    <form name='form' id='form' action="map.html" method="get"></form>
     <label for="name"style=" position: absolute;
-        width: 90%;
-        font-size: 40px;
-        left: 0%;
-        TOP:0%;
-
-      "><b>緊急聯絡人</b></label></div>
-<form name='form' id='form' action="map.html" method="get">
-  <label for="name"style=" position: absolute;
         width: 30%;
         font-size: 20px;
         left:1%;
@@ -48,31 +40,41 @@
         TOP:100px;
       "  />
       <br>
+      <div align=center>
+    <label for="name"style=" position: absolute;
+        width: 90%;
+        font-size: 40px;
+        left: 0%;
+        TOP:200px;
+
+      "><b>緊急聯絡人</b></label></div>
+
+
   <label for="email"style=" position: absolute;
         width: 30%;
         font-size: 20px;
         left:1%;
-        TOP:150px;
+        TOP:350px;
       ">電子信箱：</label>
   <input type='email' name='email' id='email' style="
         position: absolute;
         width: 60%;
         font-size: 20px;
         left: 31%;
-        TOP:150px;
+        TOP:350px;
       "/><br>
   <label for="phone"style=" position: absolute;
         width: 30%;
         font-size: 20px;
-        left: 1%
-        TOP:200px;
+        left:1%;
+        TOP:400px;
       ">手機號碼：</label>
   <input type='text' name='phone' id='phone' style="
         position: absolute;
         width: 60%;
         font-size: 20px;
         left: 31%;
-        TOP:200px;
+        TOP:400px;
       "/>
        <input type='reset' name='reset' value='重置' style="
         position: absolute;
@@ -80,7 +82,7 @@
         height: 40px;
         font-size: 20px;
         right: 40%;
-        TOP:250px;
+        TOP:450px;
       " />
   <input type='button' name='submit' value='送出' style="
         position: absolute;
@@ -88,7 +90,7 @@
         height: 40px;
         font-size: 20px;
         right: 5%;
-        TOP:250px;
+        TOP:450px;
       "  onclick='processFormData() ;'
        />
 
