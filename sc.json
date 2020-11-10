@@ -1,0 +1,922 @@
+{
+  "success": true,
+  "result": {
+    "include_total": true,
+    "resource_id": "6c002322-c486-4671-91b8-c3a6247c69c9",
+    "fields": [
+      { "type": "int", "id": "_id" },
+      { "type": "text", "id": "Bianhao" },
+      { "type": "text", "id": "address" },
+      { "type": "text", "id": "camera_direction" },
+      { "type": "text", "id": "Haya_gen" },
+      { "type": "text", "id": "Latitude" },
+      { "type": "text", "id": "Longitude" }
+    ],
+    "records_format": "objects",
+    "records": [
+      {
+        "_id": 1,
+        "Bianhao": "1",
+        "address": "桃園區成功路三段235號前",
+        "camera_direction": "往桃園市區方向",
+        "Haya_gen": "40",
+        "Latitude": "25.0072897",
+        "Longitude": "121.3247527"
+      },
+      {
+        "_id": 2,
+        "Bianhao": "2",
+        "address": "桃園區春日路561號前",
+        "camera_direction": "往桃園市區方向",
+        "Haya_gen": "50",
+        "Latitude": "25.0049995",
+        "Longitude": "121.3124597"
+      },
+      {
+        "_id": 3,
+        "Bianhao": "3",
+        "address": "桃園區富國路379號對面",
+        "camera_direction": "往蘆竹方向",
+        "Haya_gen": "50",
+        "Latitude": "25.014464",
+        "Longitude": "121.285832"
+      },
+      {
+        "_id": 4,
+        "Bianhao": "4",
+        "address": "桃園區大興西路三段與正光路口",
+        "camera_direction": "往南桃園交流道方向",
+        "Haya_gen": "50",
+        "Latitude": "25.005877",
+        "Longitude": "121.290768"
+      },
+      {
+        "_id": 5,
+        "Bianhao": "5",
+        "address": "桃園區大興西路三段與正光路口",
+        "camera_direction": "往永安路方向",
+        "Haya_gen": "50",
+        "Latitude": "25.005361",
+        "Longitude": "121290606"
+      },
+      {
+        "_id": 6,
+        "Bianhao": "6",
+        "address": "中壢區中山東路二段371號前",
+        "camera_direction": "往市區方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9487467",
+        "Longitude": "121.2436302"
+      },
+      {
+        "_id": 7,
+        "Bianhao": "7",
+        "address": "中壢區中園路二段46巷口",
+        "camera_direction": "南下車道",
+        "Haya_gen": "50",
+        "Latitude": "24.9867215",
+        "Longitude": "121.2387343"
+      },
+      {
+        "_id": 8,
+        "Bianhao": "8",
+        "address": "中壢區中園路421號前",
+        "camera_direction": "往中壢方向",
+        "Haya_gen": "50",
+        "Latitude": "25.0024763",
+        "Longitude": "121.2293464"
+      },
+      {
+        "_id": 9,
+        "Bianhao": "9",
+        "address": "中壢區中正路四段353號前",
+        "camera_direction": "往中壢方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9904469",
+        "Longitude": "121.174404"
+      },
+      {
+        "_id": 10,
+        "Bianhao": "10",
+        "address": "中壢區中正路二段239巷口",
+        "camera_direction": "往中壢方向",
+        "Haya_gen": "50",
+        "Latitude": "24.977359",
+        "Longitude": "121.195226"
+      },
+      {
+        "_id": 11,
+        "Bianhao": "11",
+        "address": "中壢區新生路三段192號前",
+        "camera_direction": "往大園方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9913954",
+        "Longitude": "121.2219984"
+      },
+      {
+        "_id": 12,
+        "Bianhao": "12",
+        "address": "中壢區民族路六段360號前",
+        "camera_direction": "往新屋方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9626775",
+        "Longitude": "121.1586343"
+      },
+      {
+        "_id": 13,
+        "Bianhao": "13",
+        "address": "中壢區新生路二段421號前",
+        "camera_direction": "往中壢方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9852355",
+        "Longitude": "121.222175"
+      },
+      {
+        "_id": 14,
+        "Bianhao": "14",
+        "address": "中壢區台31線12.3K(無門牌)",
+        "camera_direction": "往南",
+        "Haya_gen": "70",
+        "Latitude": "24.9913722",
+        "Longitude": "121.1929972"
+      },
+      {
+        "_id": 15,
+        "Bianhao": "15",
+        "address": "中壢區台31線12.5K(高鐵南路三段727巷口)",
+        "camera_direction": "往北",
+        "Haya_gen": "70",
+        "Latitude": "24.9913722",
+        "Longitude": "121.1929972"
+      },
+      {
+        "_id": 16,
+        "Bianhao": "16",
+        "address": "中壢區領航南路與新生路口",
+        "camera_direction": "往北",
+        "Haya_gen": "50",
+        "Latitude": "24.9721514",
+        "Longitude": "121.2053963"
+      },
+      {
+        "_id": 17,
+        "Bianhao": "17",
+        "address": "中壢區中華路普忠路口",
+        "camera_direction": "往中壢方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9659841",
+        "Longitude": "121.2413651"
+      },
+      {
+        "_id": 18,
+        "Bianhao": "18",
+        "address": "中壢區高鐵北路與青心路口",
+        "camera_direction": "往大園方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9721514",
+        "Longitude": "121.2053963"
+      },
+      {
+        "_id": 19,
+        "Bianhao": "19",
+        "address": "中壢區中園路二段346號",
+        "camera_direction": "往大園方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9965277",
+        "Longitude": "121.2319572"
+      },
+      {
+        "_id": 20,
+        "Bianhao": "20",
+        "address": "中壢區普忠路770巷口",
+        "camera_direction": "往榮民南路方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9525227",
+        "Longitude": "121.2511524"
+      },
+      {
+        "_id": 21,
+        "Bianhao": "21",
+        "address": "中壢區普忠路581巷前",
+        "camera_direction": "往環中東路方向",
+        "Haya_gen": "50",
+        "Latitude": "24.954818",
+        "Longitude": "121.251161"
+      },
+      {
+        "_id": 22,
+        "Bianhao": "22",
+        "address": "中壢區中豐北路與大圳路一段口",
+        "camera_direction": "往高鐵站方向",
+        "Haya_gen": "50",
+        "Latitude": "24.984001",
+        "Longitude": "121.214293"
+      },
+      {
+        "_id": 23,
+        "Bianhao": "23",
+        "address": "中壢區中豐北路與大圳路一段口",
+        "camera_direction": "往市區方向",
+        "Haya_gen": "50",
+        "Latitude": "24.984825",
+        "Longitude": "121.213405"
+      },
+      {
+        "_id": 24,
+        "Bianhao": "24",
+        "address": "中壢區晉元路180號對面",
+        "camera_direction": "(往榮民南路方向)",
+        "Haya_gen": "50",
+        "Latitude": "24.950453",
+        "Longitude": "121.260845"
+      },
+      {
+        "_id": 25,
+        "Bianhao": "25",
+        "address": "平鎮區環南路301巷平興國中前岔路口",
+        "camera_direction": "南下車道",
+        "Haya_gen": "50",
+        "Latitude": "24.9502343",
+        "Longitude": "121.2066417"
+      },
+      {
+        "_id": 26,
+        "Bianhao": "26",
+        "address": "平鎮區路橋南與平德路前",
+        "camera_direction": "北上車道",
+        "Haya_gen": "50",
+        "Latitude": "24.9296022",
+        "Longitude": "121.2053963"
+      },
+      {
+        "_id": 27,
+        "Bianhao": "27",
+        "address": "平鎮區中豐路山頂段531號",
+        "camera_direction": "往龍潭方向",
+        "Haya_gen": "50",
+        "Latitude": "24.893104",
+        "Longitude": "121.212054"
+      },
+      {
+        "_id": 28,
+        "Bianhao": "28",
+        "address": "平鎮區中豐路與三興路岔路口",
+        "camera_direction": "往中壢方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9550523",
+        "Longitude": "121.2187218"
+      },
+      {
+        "_id": 29,
+        "Bianhao": "29",
+        "address": "平鎮區民族路雙連一段168號前",
+        "camera_direction": "往新屋方向",
+        "Haya_gen": "50",
+        "Latitude": "24.958342",
+        "Longitude": "121.180317"
+      },
+      {
+        "_id": 30,
+        "Bianhao": "30",
+        "address": "平鎮區福龍路二段550號",
+        "camera_direction": "往龍潭方向",
+        "Haya_gen": "50",
+        "Latitude": "24.8967873",
+        "Longitude": "121.2259958"
+      },
+      {
+        "_id": 31,
+        "Bianhao": "31",
+        "address": "平鎮區延平路三段260巷口前",
+        "camera_direction": "往楊梅方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9378598",
+        "Longitude": "121.2009484"
+      },
+      {
+        "_id": 32,
+        "Bianhao": "32",
+        "address": "平鎮區中興路與南豐路口",
+        "camera_direction": "往埔心方向",
+        "Haya_gen": "50",
+        "Latitude": "24.898372",
+        "Longitude": "121.193664"
+      },
+      {
+        "_id": 33,
+        "Bianhao": "33",
+        "address": "平鎮區中興路平鎮段305號前",
+        "camera_direction": "往埔心方向",
+        "Haya_gen": "50",
+        "Latitude": "24.903605",
+        "Longitude": "121.191392"
+      },
+      {
+        "_id": 34,
+        "Bianhao": "34",
+        "address": "平鎮區金陵路與環南路口",
+        "camera_direction": "往平鎮方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9407586",
+        "Longitude": "121.2229896"
+      },
+      {
+        "_id": 35,
+        "Bianhao": "35",
+        "address": "平鎮區金陵路四段409號前約80公尺處",
+        "camera_direction": "往平鎮方向",
+        "Haya_gen": "50",
+        "Latitude": "24.91479",
+        "Longitude": "121.231178"
+      },
+      {
+        "_id": 36,
+        "Bianhao": "36",
+        "address": "平鎮區營德路與華隆街路口前約150公尺處",
+        "camera_direction": "往龍岡路方向",
+        "Haya_gen": "50",
+        "Latitude": "24.923742",
+        "Longitude": "121.23699"
+      },
+      {
+        "_id": 37,
+        "Bianhao": "37",
+        "address": "平鎮區中豐路與延平路口",
+        "camera_direction": "往平鎮方向",
+        "Haya_gen": "50",
+        "Latitude": "24.950768",
+        "Longitude": "121.218257"
+      },
+      {
+        "_id": 38,
+        "Bianhao": "38",
+        "address": "八德區新生路段近龍宮街36巷9弄口",
+        "camera_direction": "往平鎮方向",
+        "Haya_gen": "50",
+        "Latitude": "24.926731",
+        "Longitude": "121.259181"
+      },
+      {
+        "_id": 39,
+        "Bianhao": "39",
+        "address": "八德區興豐路1176號前",
+        "camera_direction": "往鶯歌方向",
+        "Haya_gen": "50",
+        "Latitude": "24.938059",
+        "Longitude": "121.307902"
+      },
+      {
+        "_id": 40,
+        "Bianhao": "40",
+        "address": "八德區興豐路1176號前",
+        "camera_direction": "往八德方向",
+        "Haya_gen": "50",
+        "Latitude": "24.938059",
+        "Longitude": "121.307902"
+      },
+      {
+        "_id": 41,
+        "Bianhao": "41",
+        "address": "八德區介壽路二段陸軍218營站前",
+        "camera_direction": "往大溪方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9409119",
+        "Longitude": "121.297497"
+      },
+      {
+        "_id": 42,
+        "Bianhao": "42",
+        "address": "八德區介壽路二段551號前",
+        "camera_direction": "往桃園方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9425853",
+        "Longitude": "121.2974796"
+      },
+      {
+        "_id": 43,
+        "Bianhao": "43",
+        "address": "八德區中華路龍壽街口署立桃園醫院前",
+        "camera_direction": "往桃園方向",
+        "Haya_gen": "50",
+        "Latitude": "24.977488",
+        "Longitude": "121.269884"
+      },
+      {
+        "_id": 44,
+        "Bianhao": "44",
+        "address": "八德區和平路439號前",
+        "camera_direction": "往交流道方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9582614",
+        "Longitude": "121.3099818"
+      },
+      {
+        "_id": 45,
+        "Bianhao": "45",
+        "address": "八德區和強路127號前",
+        "camera_direction": "往桃園向",
+        "Haya_gen": "50",
+        "Latitude": "24.9606343",
+        "Longitude": "121.3184315"
+      },
+      {
+        "_id": 46,
+        "Bianhao": "46",
+        "address": "大溪區信義路永福派出所前",
+        "camera_direction": "往新北市方向",
+        "Haya_gen": "50",
+        "Latitude": "24.8942399",
+        "Longitude": "121.324083"
+      },
+      {
+        "_id": 47,
+        "Bianhao": "47",
+        "address": "大溪區信義路永福派出所前",
+        "camera_direction": "往大溪方向",
+        "Haya_gen": "50",
+        "Latitude": "24.8942399",
+        "Longitude": "121.324083"
+      },
+      {
+        "_id": 48,
+        "Bianhao": "48",
+        "address": "大溪區崎頂下坡路段",
+        "camera_direction": "往大溪方向",
+        "Haya_gen": "50",
+        "Latitude": "24.899925",
+        "Longitude": "121.282295"
+      },
+      {
+        "_id": 49,
+        "Bianhao": "49",
+        "address": "大溪區瑞安路一段562號前(台4線29K+900)崁津橋前",
+        "camera_direction": "往崎頂方向",
+        "Haya_gen": "60",
+        "Latitude": "24.8749746",
+        "Longitude": "121.2784167"
+      },
+      {
+        "_id": 50,
+        "Bianhao": "50",
+        "address": "大溪區瑞安路一段(台4線29K+650)崁津橋前)",
+        "camera_direction": "往石門水庫方向",
+        "Haya_gen": "60",
+        "Latitude": "24.8749746",
+        "Longitude": "121.2784167"
+      },
+      {
+        "_id": 51,
+        "Bianhao": "51",
+        "address": "大溪區介壽路與仁善街路口",
+        "camera_direction": "往大溪方向",
+        "Haya_gen": "50",
+        "Latitude": "24.907955",
+        "Longitude": "121.28657"
+      },
+      {
+        "_id": 52,
+        "Bianhao": "52",
+        "address": "大溪區大鶯路769巷口",
+        "camera_direction": "往大溪方向",
+        "Haya_gen": "40",
+        "Latitude": "24.918502",
+        "Longitude": "121.29937"
+      },
+      {
+        "_id": 53,
+        "Bianhao": "53",
+        "address": "大溪區康莊路5段6號",
+        "camera_direction": "往龍潭方向",
+        "Haya_gen": "60",
+        "Latitude": "24.8269628",
+        "Longitude": "121.2662367"
+      },
+      {
+        "_id": 54,
+        "Bianhao": "54",
+        "address": "大溪區石園路327號前",
+        "camera_direction": "往大溪方向",
+        "Haya_gen": "60",
+        "Latitude": "24.8736",
+        "Longitude": "121.263136"
+      },
+      {
+        "_id": 55,
+        "Bianhao": "55",
+        "address": "大溪區員林路一段142巷口",
+        "camera_direction": "往龍潭方向",
+        "Haya_gen": "50",
+        "Latitude": "24.8993832",
+        "Longitude": "121.2811115"
+      },
+      {
+        "_id": 56,
+        "Bianhao": "56",
+        "address": "大溪區埔頂路二段256號",
+        "camera_direction": "往八德方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9131809",
+        "Longitude": "121.2809795"
+      },
+      {
+        "_id": 57,
+        "Bianhao": "57",
+        "address": "大溪區永昌路台66線路口",
+        "camera_direction": "往中壢方向",
+        "Haya_gen": "50",
+        "Latitude": "24.8979704",
+        "Longitude": "121.262498"
+      },
+      {
+        "_id": 58,
+        "Bianhao": "58",
+        "address": "大溪區復興路二段20號前",
+        "camera_direction": "往復興方向",
+        "Haya_gen": "40",
+        "Latitude": "24.880772",
+        "Longitude": "121.2888997"
+      },
+      {
+        "_id": 59,
+        "Bianhao": "59",
+        "address": "大溪區仁和路二段517巷口",
+        "camera_direction": "往大溪方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9119531",
+        "Longitude": "121.2595411"
+      },
+      {
+        "_id": 60,
+        "Bianhao": "60",
+        "address": "大溪區康莊路三段632號對面（台4線34K+200處）",
+        "camera_direction": "往大溪方向",
+        "Haya_gen": "60",
+        "Latitude": "24.846693",
+        "Longitude": "121.273075"
+      },
+      {
+        "_id": 61,
+        "Bianhao": "61",
+        "address": "大溪區台七乙線9.1K處",
+        "camera_direction": "往大溪方向",
+        "Haya_gen": "40",
+        "Latitude": "24.849946",
+        "Longitude": "121.351236"
+      },
+      {
+        "_id": 62,
+        "Bianhao": "62",
+        "address": "大溪區台七乙線9.1K處",
+        "camera_direction": "往新北市方向",
+        "Haya_gen": "40",
+        "Latitude": "24.849946",
+        "Longitude": "121.351236"
+      },
+      {
+        "_id": 63,
+        "Bianhao": "63",
+        "address": "大溪區月眉路1號前約120公尺處",
+        "camera_direction": "往桃園方向",
+        "Haya_gen": "50",
+        "Latitude": "24.885728",
+        "Longitude": "121.28862"
+      },
+      {
+        "_id": 64,
+        "Bianhao": "64",
+        "address": "龜山區文化一路與復興二路口",
+        "camera_direction": "往龜山方向",
+        "Haya_gen": "60",
+        "Latitude": "25.057079",
+        "Longitude": "121.374062"
+      },
+      {
+        "_id": 65,
+        "Bianhao": "65",
+        "address": "龜山區文化二路與文昌一街口",
+        "camera_direction": "往林口方向",
+        "Haya_gen": "50",
+        "Latitude": "25.056957",
+        "Longitude": "121.367105"
+      },
+      {
+        "_id": 66,
+        "Bianhao": "66",
+        "address": "龜山區復興三路500號對面",
+        "camera_direction": "往大埔方向",
+        "Haya_gen": "50",
+        "Latitude": "25.0430289",
+        "Longitude": "121.369965"
+      },
+      {
+        "_id": 67,
+        "Bianhao": "67",
+        "address": "龜山區萬壽路一段18K+960",
+        "camera_direction": "北上車道",
+        "Haya_gen": "50",
+        "Latitude": "25.012165",
+        "Longitude": "121.383579"
+      },
+      {
+        "_id": 68,
+        "Bianhao": "68",
+        "address": "龜山區萬壽路一段1247巷前",
+        "camera_direction": "南下車道",
+        "Haya_gen": "50",
+        "Latitude": "25.0119967",
+        "Longitude": "121.3868147"
+      },
+      {
+        "_id": 69,
+        "Bianhao": "69",
+        "address": "龜山區萬壽路二段與忠孝街口前",
+        "camera_direction": "往北上方向",
+        "Haya_gen": "50",
+        "Latitude": "24.992448",
+        "Longitude": "121.324431"
+      },
+      {
+        "_id": 70,
+        "Bianhao": "70",
+        "address": "龜山區萬壽路二段1262號前",
+        "camera_direction": "往南下方向",
+        "Haya_gen": "50",
+        "Latitude": "24.993011",
+        "Longitude": "121.327183"
+      },
+      {
+        "_id": 71,
+        "Bianhao": "71",
+        "address": "龜山區東萬壽路與龍校街121巷6弄口",
+        "camera_direction": "南下車道",
+        "Haya_gen": "50",
+        "Latitude": "25.0094757",
+        "Longitude": "121.376376"
+      },
+      {
+        "_id": 72,
+        "Bianhao": "72",
+        "address": "龜山區東萬壽路622號前",
+        "camera_direction": "北上車道",
+        "Haya_gen": "50",
+        "Latitude": "25.0089425",
+        "Longitude": "121.3750697"
+      },
+      {
+        "_id": 73,
+        "Bianhao": "73",
+        "address": "龜山區振興路829巷口旁",
+        "camera_direction": "往桃園方向",
+        "Haya_gen": "60",
+        "Latitude": "25.0216307",
+        "Longitude": "121.362755"
+      },
+      {
+        "_id": 74,
+        "Bianhao": "74",
+        "address": "龜山區忠義路與舊105線岔路口",
+        "camera_direction": "往林口方向",
+        "Haya_gen": "60",
+        "Latitude": "25.0207933",
+        "Longitude": "121.3500753"
+      },
+      {
+        "_id": 75,
+        "Bianhao": "75",
+        "address": "龜山區忠義路一段1196-15號前",
+        "camera_direction": "往林口方向",
+        "Haya_gen": "60",
+        "Latitude": "25.0356655",
+        "Longitude": "121.3554304"
+      },
+      {
+        "_id": 76,
+        "Bianhao": "76",
+        "address": "龜山區忠義路一段18K+660前",
+        "camera_direction": "往桃園方向",
+        "Haya_gen": "60",
+        "Latitude": "25.0356655",
+        "Longitude": "121.3554304"
+      },
+      {
+        "_id": 77,
+        "Bianhao": "77",
+        "address": "龜山區忠義路一段20.5K處",
+        "camera_direction": "往桃園方向",
+        "Haya_gen": "60",
+        "Latitude": "25.018615",
+        "Longitude": "121.348799"
+      },
+      {
+        "_id": 78,
+        "Bianhao": "78",
+        "address": "龜山區忠義路一段20.5K處",
+        "camera_direction": "往林口方向",
+        "Haya_gen": "60",
+        "Latitude": "25.018615",
+        "Longitude": "121.348799"
+      },
+      {
+        "_id": 79,
+        "Bianhao": "79",
+        "address": "龜山區樂善村青山路2K",
+        "camera_direction": "往新莊方向",
+        "Haya_gen": "50",
+        "Latitude": "25.0358276",
+        "Longitude": "121.3913376"
+      },
+      {
+        "_id": 80,
+        "Bianhao": "80",
+        "address": "龜山區振興路1169號前",
+        "camera_direction": "往龜山方向",
+        "Haya_gen": "60",
+        "Latitude": "25.0296641",
+        "Longitude": "121.3749706"
+      },
+      {
+        "_id": 81,
+        "Bianhao": "81",
+        "address": "龜山區華亞三路近華亞二路前",
+        "camera_direction": "往大埔方向",
+        "Haya_gen": "50",
+        "Latitude": "25.0438447",
+        "Longitude": "121.3770658"
+      },
+      {
+        "_id": 82,
+        "Bianhao": "82",
+        "address": "龜山區華亞三路近文化二路口",
+        "camera_direction": "往長庚方向",
+        "Haya_gen": "50",
+        "Latitude": "25.0438447",
+        "Longitude": "121.3770658"
+      },
+      {
+        "_id": 83,
+        "Bianhao": "83",
+        "address": "龍潭區中豐路高平段281號前",
+        "camera_direction": "南下車道",
+        "Haya_gen": "60",
+        "Latitude": "24.8358128",
+        "Longitude": "121.2069125"
+      },
+      {
+        "_id": 84,
+        "Bianhao": "84",
+        "address": "龍潭區福源路256號對面",
+        "camera_direction": "往龍潭市區方向",
+        "Haya_gen": "40",
+        "Latitude": "24.8259766",
+        "Longitude": "121.185085"
+      },
+      {
+        "_id": 85,
+        "Bianhao": "85",
+        "address": "龍潭區中正路三林段330號前",
+        "camera_direction": "往龍潭市區方向",
+        "Haya_gen": "50",
+        "Latitude": "24.8497165",
+        "Longitude": "121.229263"
+      },
+      {
+        "_id": 86,
+        "Bianhao": "86",
+        "address": "龍潭區龍源路大平段290號前",
+        "camera_direction": "往大溪方向",
+        "Haya_gen": "60",
+        "Latitude": "24.8260249",
+        "Longitude": "121.2386578"
+      },
+      {
+        "_id": 87,
+        "Bianhao": "87",
+        "address": "龍潭區中正路三坑下坡路段(台3乙線5K+120)",
+        "camera_direction": "往石門水庫方向",
+        "Haya_gen": "60",
+        "Latitude": "24.8374421",
+        "Longitude": "121.2460684"
+      },
+      {
+        "_id": 88,
+        "Bianhao": "88",
+        "address": "龍潭區中興路九龍段3巷",
+        "camera_direction": "往大溪方向",
+        "Haya_gen": "50",
+        "Latitude": "24.8795703",
+        "Longitude": "121.2490632"
+      },
+      {
+        "_id": 89,
+        "Bianhao": "89",
+        "address": "龍潭區上坪1-2號前",
+        "camera_direction": "往大溪方向",
+        "Haya_gen": "60",
+        "Latitude": "24.8253925",
+        "Longitude": "121.2474495"
+      },
+      {
+        "_id": 90,
+        "Bianhao": "90",
+        "address": "龍潭區聖亭路236號春源鋼鐵旁",
+        "camera_direction": "往龍潭方向",
+        "Haya_gen": "50",
+        "Latitude": "24.8704779",
+        "Longitude": "121.204508"
+      },
+      {
+        "_id": 91,
+        "Bianhao": "91",
+        "address": "蘆竹區仁愛路三段高鐵橋前",
+        "camera_direction": "往蘆竹方向",
+        "Haya_gen": "40",
+        "Latitude": "25.0554407",
+        "Longitude": "121.310085"
+      },
+      {
+        "_id": 92,
+        "Bianhao": "92",
+        "address": "蘆竹區富國路130號前",
+        "camera_direction": "往蘆竹方向",
+        "Haya_gen": "40",
+        "Latitude": "25.045538",
+        "Longitude": "121.2662347"
+      },
+      {
+        "_id": 93,
+        "Bianhao": "93",
+        "address": "蘆竹區大竹路109號前",
+        "camera_direction": "往桃園方向",
+        "Haya_gen": "50",
+        "Latitude": "25.0145407",
+        "Longitude": "121.2712"
+      },
+      {
+        "_id": 94,
+        "Bianhao": "94",
+        "address": "蘆竹區大竹北路1085巷對面",
+        "camera_direction": "往大園方向",
+        "Haya_gen": "60",
+        "Latitude": "25.042521",
+        "Longitude": "121.236726"
+      },
+      {
+        "_id": 95,
+        "Bianhao": "95",
+        "address": "蘆竹區文中路1段265巷前",
+        "camera_direction": "往桃園方向",
+        "Haya_gen": "50",
+        "Latitude": "24.9892566",
+        "Longitude": "121.2622482"
+      },
+      {
+        "_id": 96,
+        "Bianhao": "96",
+        "address": "蘆竹區富國路2段360號",
+        "camera_direction": "往桃園方向",
+        "Haya_gen": "50",
+        "Latitude": "25.0398373",
+        "Longitude": "121.2684477"
+      },
+      {
+        "_id": 97,
+        "Bianhao": "97",
+        "address": "蘆竹區南青路607號(台31線3K＋150)",
+        "camera_direction": "往南方向",
+        "Haya_gen": "60",
+        "Latitude": "25.0473951",
+        "Longitude": "121.2515192"
+      },
+      {
+        "_id": 98,
+        "Bianhao": "98",
+        "address": "蘆竹區山林路二段655號前",
+        "camera_direction": "往山腳方向",
+        "Haya_gen": "50",
+        "Latitude": "25.081982",
+        "Longitude": "121.308091"
+      },
+      {
+        "_id": 99,
+        "Bianhao": "99",
+        "address": "蘆竹區八德一路與八德二路口",
+        "camera_direction": "往蘆竹方向",
+        "Haya_gen": "40",
+        "Latitude": "25.064641",
+        "Longitude": "121.338996"
+      },
+      {
+        "_id": 100,
+        "Bianhao": "100",
+        "address": "大園區國際路二段與中央路路口",
+        "camera_direction": "往竹圍方向",
+        "Haya_gen": "70",
+        "Latitude": "25.1073861",
+        "Longitude": "121.2440951"
+      }
+    ],
+    "offset": 0,
+    "total": 124,
+    "limit": 100
+  }
+}
