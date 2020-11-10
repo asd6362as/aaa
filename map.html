@@ -41,13 +41,13 @@
     ></script>
 
     <script type="text/javascript">
-    var strUrl = location.search;
+    var strUrl = location.search ;
     var getPara, ParaVal;
     var aryPara = [];
     var marker1;
-    var map;
+    var map ;
     var markers = [];
-    var str = {};
+    var cbstr = {};
     var name , email , phone , email1 = [];
       function initMap() {
         var marker;
@@ -67,7 +67,7 @@
         }
         email1 = aryPara[1].split("%40");
         let emailstr = email1[0]+'@'+email1[1];
-        name = aryPara[0];
+        name = decodeURI(aryPara[0]);
         email = emailstr;
         phone = aryPara[2]
       }
@@ -108,12 +108,12 @@
               var place = {};
               place.lat = parseFloat(carData[i]["lat"]);
               place.lng = parseFloat(carData[i]["lon"]);
-              str.map = map;
-              str.position = place;
-              str.icon = "https://asd6362as.github.io/aaa/car1.png";
-              str.title = carData[i]["車禍"];
-              console.log(str);
-              const carboom=new google.maps.Marker(str);
+              cbstr.map = map;
+              cbstr.position = place;
+              cbstr.icon = "https://asd6362as.github.io/aaa/car1.png";
+              cbstr.title = carData[i]["車禍"];
+              console.log(cbstr);
+              const carboom=new google.maps.Marker(cbstr);
               markers.push(carboom)
             }
             carboom.setmap(map1);
@@ -137,7 +137,6 @@
         }
       }
       function Dc() {
-      email.concat(email1[0],'+',email1[1]);
       alert(name);
       alert(email);
       alert(phone);
