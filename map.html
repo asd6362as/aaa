@@ -46,8 +46,10 @@
     var aryPara = [];
     var marker1;
     var map ;
-    var markers = [];
+    var cbs = [];
+    var scs = [];
     var cbstr = {};
+    var scstr = {};
     var name , email , phone , email1 = [];
       function initMap() {
         var marker;
@@ -91,7 +93,31 @@
               });
               map.setCenter(position1);
             });
-            marker.setmap(map2);
+          }
+        }
+                speedcamera();
+        function speedcamera() {
+          var xhr1 = new XMLHttpRequest();
+          xhr1.open("get", 'https://asd6362as.github.io/aaa/sc.json', true);
+          xhr1.send(null);
+          xhr1.onload = function () {
+            var record1 = JSON.parse(xhr1.responseText);
+            scData = record1.result.records;
+            len1=scData.length;
+            for( var qqq = 0 ; qqq < len1; qqq++ ) {
+              var place1 = {};
+
+              place1.lat = parseFloat(scData[qqq]["Latitude"]);
+              place1.lng = parseFloat(scData[qqq]["Longitude"]);
+              scstr.map = map;
+              scstr.position = place1;
+              scstr.icon = "https://asd6362as.github.io/aaa/sc.png";
+              scstr.title = scData[qqq]["測速"];
+              console.log(scstr);
+              const scm=new google.maps.Marker(scstr);
+              scs.push(scm);
+              scs[i].setMap(null);
+            };
           }
         }
         carbooma();
@@ -103,8 +129,7 @@
             var record = JSON.parse(xhr.responseText);
             carData = record.result.records;
             len = carData.length;
-            for (i = 0; i < carData.length; i++) {
-
+            for (i = 0; i < len; i++) {
               var place = {};
               place.lat = parseFloat(carData[i]["lat"]);
               place.lng = parseFloat(carData[i]["lon"]);
@@ -114,25 +139,42 @@
               cbstr.title = carData[i]["車禍"];
               console.log(cbstr);
               const carboom=new google.maps.Marker(cbstr);
-              markers.push(carboom)
+              cbs.push(carboom);
+              cbs[i].setMap(null);
             }
-            carboom.setmap(map1);
           };
         }
       }
+
       function cg1() {
         var cb = document.getElementById("cb1");
         if(cb.style["background-image"]=="url(\"https://asd6362as.github.io/aaa/carboom.png\")")
         {
           cb.style["background-image"]="url(https://asd6362as.github.io/aaa/Carboom2.png)";
-          for (let i = 0; i < markers.length; i++) {
-          markers[i].setMap(null)
+          for (let i = 0; i < cbs.length; i++) {
+          cbs[i].setMap(map)
           }
         }
         else if(cb.style["background-image"]!="url(\"https://asd6362as.github.io/aaa/carboom.png\")"){
         cb.style["background-image"]="url(https://asd6362as.github.io/aaa/carboom.png)";
-          for (let i = 0; i < markers.length; i++) {
-              markers[i].setMap(map)
+          for (let i = 0; i < cbs.length; i++) {
+              cbs[i].setMap(null)
+          }
+        }
+      }
+      function scb() {
+        var cb = document.getElementById("cb1");
+        if(sc.style["background-image"]=="url(\"https://asd6362as.github.io/aaa/sc.png\")")
+        {
+          sc.style["background-image"]="url(https://asd6362as.github.io/aaa/sc2.png)";
+          for (let i = 0; i < scs.length; i++) {
+          scs[i].setMap(map)
+          }
+        }
+        else if(sc.style["background-image"]!="url(\"https://asd6362as.github.io/aaa/sc.png\")"){
+        sc.style["background-image"]="url(https://asd6362as.github.io/aaa/sc.png)";
+          for (let i = 0; i < scs.length; i++) {
+              scs[i].setMap(null)
           }
         }
       }
@@ -153,10 +195,25 @@
         width: 44px;
         height: 44px;
         font-size: 10px;
+        left: 1%;
         bottom: 10%;
         background-image:url(https://asd6362as.github.io/aaa/carboom.png);
       "
       onClick="cg1()"
+    /><input
+      id="cb1"
+      type="button"
+      value=""
+      style="
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        font-size: 10px;
+         left: 20%;
+        bottom: 10%;
+        background-image:url(https://asd6362as.github.io/aaa/sc.png);
+      "
+      onClick="scb()"
     />
     <input
       id="EC1"
@@ -167,7 +224,7 @@
         width: 100px;
         height: 30px;
         font-size: 18px;
-        right: 2%;
+        right: 1%;
         bottom:5px;
       "
       onClick="location.href='EC.html'"
@@ -181,10 +238,10 @@
         width: 100px;
         height: 30px;
         font-size: 18px;
-        right: 36.5%;
+        right: 35%;
         bottom:5px;
       "
-      onClick="location.href='EC.html'"
+      onClick="sc1()"
     />
     <input
       id="phone1"
@@ -195,7 +252,7 @@
         width: 100px;
         height: 30px;
         font-size: 18px;
-        right: 71%;
+        right: 70%;
         bottom:5px;
       "
       onClick="Dc()"
