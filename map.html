@@ -47,6 +47,7 @@
     var map;
     var markers = [];
     var str = {};
+    var name , email , phone , email1 = [];
       function initMap() {
         var marker;
         var latlng = { lat: 24.990229, lng: 121.232133 };
@@ -61,9 +62,13 @@
         getPara = getSearch[1].split("&");
         for (i = 0; i < getPara.length; i++) {
           ParaVal = getPara[i].split("=");
-          aryPara.push(ParaVal[0]);
-          aryPara[ParaVal[0]] = ParaVal[1];
+          aryPara.push(ParaVal[1]);
         }
+        email1 = aryPara[1].split("%40");
+        let emailstr = email1[0]+'@'+email1[1];
+        name = aryPara[0];
+        email = emailstr;
+        phone = aryPara[2]
       }
         setInterval(displayLocation, 1000);
         function displayLocation() {
@@ -131,7 +136,10 @@
         }
       }
       function Dc() {
-alert(getPara);
+      email.concat(email1[0],'+',email1[1]);
+      alert(name);
+      alert(email);
+      alert(phone);
       }
 
     </script>
