@@ -147,8 +147,10 @@
       }
 
       function mail(){
-        var mailto ='mailto:'+email+'?subject=help&body=座標:'+position1+ popupContent;
-          parent.location.href=mailto;
+        var mail1 ='mailto:'+email+'?subject=help&body=座標:'+position1;
+        if (confirm("Are you sure you want to mail " + email )==true){
+          parent.location.href=mail1;
+      }
       }
       function cg1() {
         var cb = document.getElementById("cb1");
@@ -190,6 +192,8 @@
       }
 
     </script>
+
+    <form>
     <input
       id="cb1"
       type="button"
@@ -261,5 +265,6 @@
       "
       onClick="Dc()"
     />
+    </form>
   </body>
 </html>
