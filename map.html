@@ -39,7 +39,6 @@
       defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX5leokofv0p2FpjEO8XZeB6N7TxV-pnk&callback=initMap"
     ></script>
-
     <script type="text/javascript">
       var strUrl = location.search;
       var getPara, ParaVal;
@@ -117,8 +116,6 @@
             });
           }
         }
-        function addresss() {
-        }
         speedcamera();
         function speedcamera() {
           var xhr1 = new XMLHttpRequest();
@@ -170,14 +167,13 @@
       }
 
       function mail() {
-        var mail1 = "mailto:" + email + "?subject=help&body=座標： " + position1 + ' 地址： ' +ars;
+       var mail1 = "mailto:" + email + "?subject=help&body=座標： " + position1 + ' 地址： ' +ars;
         if (confirm("Are you sure you want to mail " + email) == true) {
           parent.location.href = mail1;
         }
       }
       function sms() {
-        addresss()
-        var sms1 = "sms:" + phone + "?body=座標： " + position1 + ' 地址： ' +ars>Link;
+        var sms1 = "sms:" + phone + "?body=座標： " + position1 + ' 地址： ' +ars;
         if (confirm("Are you sure you want to sms " + phone) == true) {
           parent.location.href = sms1;
         }
