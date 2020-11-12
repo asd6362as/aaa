@@ -41,17 +41,31 @@
     ></script>
 
     <script type="text/javascript">
-    var strUrl = location.search ;
-    var getPara, ParaVal;
-    var aryPara = [];
-    var marker1,map,position1;
-    var cbs = [];
-    var scs = [];
-    var cbstr = {};
-    var scstr = {};
-    var name , email , phone , email1 = [] ;
-    let ars;
+      var strUrl = location.search;
+      var getPara, ParaVal;
+      var urls = location;
+      var aryPara = [];
+      var marker1, map, position1;
+      var cbs = [];
+      var scs = [];
+      var cbstr = {};
+      var scstr = {};
+      var name,
+        email,
+        phone,
+        email1 = [],
+        ars,
+        p1;
       function initMap() {
+        geocoder = new google.maps.Geocoder();
+        if (location.href == "http://127.0.0.1:5500/map.html") {
+          var a = localStorage.getItem("SURL");
+          if (a != null) {
+            location.href = a;
+          }
+        } else {
+          var a = localStorage.setItem("SURL", location.href);
+        }
         var marker;
         var latlng = { lat: 24.990229, lng: 121.232133 };
         map = new google.maps.Map(document.getElementById("map"), {
@@ -60,19 +74,21 @@
           streetViewControl: false,
           clickableIcons: true,
         });
-      if (strUrl.indexOf("?") != -1) {
-        var getSearch = strUrl.split("?");
-        getPara = getSearch[1].split("&");
-        for (i = 0; i < getPara.length; i++) {
-          ParaVal = getPara[i].split("=");
-          aryPara.push(ParaVal[1]);
+
+        if (strUrl.indexOf("?") != -1) {
+          var getSearch = strUrl.split("?");
+          getPara = getSearch[1].split("&");
+          for (i = 0; i < getPara.length; i++) {
+            ParaVal = getPara[i].split("=");
+            aryPara.push(ParaVal[1]);
+          }
+          email1 = aryPara[1].split("%40");
+          let emailstr = email1[0] + "@" + email1[1];
+          name = decodeURI(aryPara[0]);
+          email = emailstr;
+          phone = aryPara[2];
         }
-        email1 = aryPara[1].split("%40");
-        let emailstr = email1[0]+'@'+email1[1];
-        name = decodeURI(aryPara[0]);
-        email = emailstr;
-        phone = aryPara[2]
-      }
+
         setInterval(displayLocation, 1000);
         function displayLocation() {
           if (navigator.geolocation) {
@@ -92,21 +108,29 @@
                 map: map,
               });
               map.setCenter(position1);
+
             });
           }
         }
-                speedcamera();
+        function addresss() {
+        geocoder.geocode(
+        {location: position1},
+        function (results, status) {
+        ars =  results[0].formatted_address;
+        }
+        );
+        }
+        speedcamera();
         function speedcamera() {
           var xhr1 = new XMLHttpRequest();
-          xhr1.open("get", 'https://asd6362as.github.io/aaa/sc.json', true);
+          xhr1.open("get", "https://asd6362as.github.io/aaa/sc.json", true);
           xhr1.send(null);
           xhr1.onload = function () {
             var record1 = JSON.parse(xhr1.responseText);
             scData = record1.result.records;
-            len1=scData.length;
-            for( var qqq = 0 ; qqq < len1; qqq++ ) {
+            len1 = scData.length;
+            for (var qqq = 0; qqq < len1; qqq++) {
               var place1 = {};
-
               place1.lat = parseFloat(scData[qqq]["Latitude"]);
               place1.lng = parseFloat(scData[qqq]["Longitude"]);
               scstr.map = map;
@@ -114,14 +138,14 @@
               scstr.icon = "https://asd6362as.github.io/aaa/sc.png";
               scstr.title = scData[qqq]["測速"];
               console.log(scstr);
-              const scm=new google.maps.Marker(scstr);
+              const scm = new google.maps.Marker(scstr);
               scs.push(scm);
               scs[qqq].setMap(null);
-            };
-          }
+            }
+          };
         }
         carbooma();
-      function carbooma() {
+        function carbooma() {
           var xhr = new XMLHttpRequest();
           xhr.open("get", "https://asd6362as.github.io/aaa/car.json", true);
           xhr.send(null);
@@ -138,7 +162,7 @@
               cbstr.icon = "https://asd6362as.github.io/aaa/car1.png";
               cbstr.title = carData[i]["車禍"];
               console.log(cbstr);
-              const carboom=new google.maps.Marker(cbstr);
+              const carboom = new google.maps.Marker(cbstr);
               cbs.push(carboom);
               cbs[i].setMap(null);
             }
@@ -146,125 +170,138 @@
         }
       }
 
-      function mail(){
-        var mail1 ='mailto:'+email+'?subject=help&body=座標:'+position1;
-        if (confirm("Are you sure you want to mail " + email )==true){
-          parent.location.href=mail1;
+      function mail() {
+        addresss()
+        var mail1 = "mailto:" + email + "?subject=help&body=座標： " + position1 + ' 地址： ' +ars;
+        if (confirm("Are you sure you want to mail " + email) == true) {
+          parent.location.href = mail1;
+        }
       }
+      function sms() {
+        addresss()
+        var sms1 = "sms:" + phone + "?body=座標： " + position1 + ' 地址： ' +ars>Link;
+        if (confirm("Are you sure you want to sms " + phone) == true) {
+          parent.location.href = sms1;
+        }
       }
       function cg1() {
         var cb = document.getElementById("cb1");
-        if(cb.style["background-image"]=="url(\"https://asd6362as.github.io/aaa/carboom.png\")")
-        {
-          cb.style["background-image"]="url(https://asd6362as.github.io/aaa/Carboom2.png)";
+        if (
+          cb.style["background-image"] ==
+          'url("https://asd6362as.github.io/aaa/carboom.png")'
+        ) {
+          cb.style["background-image"] =
+            "url(https://asd6362as.github.io/aaa/Carboom2.png)";
           for (let i = 0; i < cbs.length; i++) {
-          cbs[i].setMap(map)
+            cbs[i].setMap(map);
           }
-        }
-        else if(cb.style["background-image"]!="url(\"https://asd6362as.github.io/aaa/carboom.png\")"){
-        cb.style["background-image"]="url(https://asd6362as.github.io/aaa/carboom.png)";
+        } else if (
+          cb.style["background-image"] !=
+          'url("https://asd6362as.github.io/aaa/carboom.png")'
+        ) {
+          cb.style["background-image"] =
+            "url(https://asd6362as.github.io/aaa/carboom.png)";
           for (let i = 0; i < cbs.length; i++) {
-              cbs[i].setMap(null)
+            cbs[i].setMap(null);
           }
         }
       }
       function scb() {
         var sc = document.getElementById("sc1");
-        if(sc.style["background-image"]=="url(\"https://asd6362as.github.io/aaa/sc.png\")")
-        {
-          sc.style["background-image"]="url(https://asd6362as.github.io/aaa/sc2.png)";
+        if (
+          sc.style["background-image"] ==
+          'url("https://asd6362as.github.io/aaa/sc.png")'
+        ) {
+          sc.style["background-image"] =
+            "url(https://asd6362as.github.io/aaa/sc2.png)";
           for (let i = 0; i < scs.length; i++) {
-          scs[i].setMap(map)
+            scs[i].setMap(map);
           }
-        }
-        else if(sc.style["background-image"]!="url(\"https://asd6362as.github.io/aaa/sc.png\")"){
-        sc.style["background-image"]="url(https://asd6362as.github.io/aaa/sc.png)";
+        } else if (
+          sc.style["background-image"] !=
+          'url("https://asd6362as.github.io/aaa/sc.png")'
+        ) {
+          sc.style["background-image"] =
+            "url(https://asd6362as.github.io/aaa/sc.png)";
           for (let i = 0; i < scs.length; i++) {
-              scs[i].setMap(null)
+            scs[i].setMap(null);
           }
         }
       }
-      function Dc() {
-
-      alert(name);
-      alert(email);
-      alert(phone);
-      }
-
     </script>
 
     <form>
-    <input
-      id="cb1"
-      type="button"
-      value=""
-      style="
-        position: absolute;
-        width: 44px;
-        height: 44px;
-        font-size: 10px;
-        left: 1%;
-        bottom: 10%;
-        background-image:url(https://asd6362as.github.io/aaa/carboom.png);
-      "
-      onClick="cg1()"
-    /><input
-      id="sc1"
-      type="button"
-      value=""
-      style="
-        position: absolute;
-        width: 44px;
-        height: 44px;
-        font-size: 10px;
-         left: 20%;
-        bottom: 10%;
-        background-image:url(https://asd6362as.github.io/aaa/sc.png);
-      "
-      onClick="scb()"
-    />
-    <input
-      id="EC1"
-      type="button"
-      value="緊急聯絡人"
-      style="
-        position: absolute;
-        width: 100px;
-        height: 30px;
-        font-size: 18px;
-        right: 1%;
-        bottom:5px;
-      "
-      onClick= "javascript:location.href='https://asd6362as.github.io/aaa/EC.html'"
-    />
-    <input
-      id="email1"
-      type="button"
-      value="電子信箱"
-      style="
-        position: absolute;
-        width: 100px;
-        height: 30px;
-        font-size: 18px;
-        right: 35%;
-        bottom:5px;
-      "
-      onClick="mail()"
-    />
-    <input
-      id="phone1"
-      type="button"
-      value="手機簡訊"
-      style="
-        position: absolute;
-        width: 100px;
-        height: 30px;
-        font-size: 18px;
-        right: 70%;
-        bottom:5px;
-      "
-      onClick="Dc()"
-    />
+      <input
+        id="cb1"
+        type="button"
+        value=""
+        style="
+          position: absolute;
+          width: 44px;
+          height: 44px;
+          font-size: 10px;
+          left: 1%;
+          bottom: 10%;
+          background-image: url(https://asd6362as.github.io/aaa/carboom.png);
+        "
+        onClick="cg1()"
+      /><input
+        id="sc1"
+        type="button"
+        value=""
+        style="
+          position: absolute;
+          width: 44px;
+          height: 44px;
+          font-size: 10px;
+          left: 20%;
+          bottom: 10%;
+          background-image: url(https://asd6362as.github.io/aaa/sc.png);
+        "
+        onClick="scb()"
+      />
+      <input
+        id="EC1"
+        type="button"
+        value="緊急聯絡人"
+        style="
+          position: absolute;
+          width: 100px;
+          height: 30px;
+          font-size: 18px;
+          right: 1%;
+          bottom: 5px;
+        "
+        onClick="location.href='EC.html'"
+      />
+      <input
+        id="email1"
+        type="button"
+        value="電子信箱"
+        style="
+          position: absolute;
+          width: 100px;
+          height: 30px;
+          font-size: 18px;
+          right: 35%;
+          bottom: 5px;
+        "
+        onClick="mail()"
+      />
+      <input
+        id="phone1"
+        type="button"
+        value="手機簡訊"
+        style="
+          position: absolute;
+          width: 100px;
+          height: 30px;
+          font-size: 18px;
+          right: 70%;
+          bottom: 5px;
+        "
+        onClick="sms()"
+      />
     </form>
   </body>
 </html>
