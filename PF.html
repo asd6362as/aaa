@@ -21,6 +21,23 @@
   <body>
 
     <div class="body">
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"
+    ></script>
+    <script type="text/javascript">
+    if (location.href  == "https://asd6362as.github.io/aaa/PF.html") {
+      pf1();
+    };
+    function pf1() {
+    var lh;
+var b = localStorage.getItem("SURL1");
+lh= location.href + b;
+location.href = lh;
+alert(b);
+    }
+    </script>
+
 
     <form name='form' id='form' action="map.html" method="get">
 
