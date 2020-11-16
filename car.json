@@ -31,6 +31,10 @@
       {
         "type": "text",
         "id": "lon"
+      },
+      {
+        "type": "text",
+        "id": "reason"
       }
     ],
     "records_format": "objects",
